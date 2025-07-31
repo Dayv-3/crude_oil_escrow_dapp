@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crude Oil Escrow DApp</title>
+  <script src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js"></script>
+</head>
+<body>
+  <h2>Escrow & Traceability System</h2>
+  <button onclick="connectWallet()">Connect Wallet</button>
+  <p id="walletAddress"></p>
+
+  <hr>
+
+  <div id="sellerSection" style="display:none">
+    <h3>Update Shipment Status (Seller)</h3>
+    <input type="text" id="statusInput" placeholder="e.g., In Transit" />
+    <button onclick="updateStatus()">Update</button>
+  </div>
+
+  <div id="inspectorSection" style="display:none">
+    <h3>Confirm Delivery (Inspector)</h3>
+    <button onclick="confirmDelivery()">Confirm Delivery</button>
+  </div>
+
+  <div>
+    <h3>Release Funds</h3>
+    <button onclick="releaseFunds()">Release</button>
+  </div>
+
+  <div>
+    <h3>Escrow Balance</h3>
+    <button onclick="getBalance()">Check Balance</button>
+    <p id="balanceDisplay"></p>
+  </div>
+
+  <script src="abi.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
